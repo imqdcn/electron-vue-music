@@ -7,6 +7,9 @@ import store from './store'
 
 if (!process.env.IS_WEB) Vue.use(require('vue-electron'))
 Vue.http = Vue.prototype.$http = axios
+// 数据的base地址
+// 访问数据使用 this.$http
+axios.defaults.baseURL = 'https://netease-cloud-music-api-ashy-six.vercel.app/';
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
